@@ -26,7 +26,7 @@ namespace PrismApp.Startup.ViewModels
             ShowMainWindowCommand = new DelegateCommand(() =>
             {
                 Debug.WriteLine("Show main window");
-                windowManager.Show();
+                windowManager.ShowMainWindow();
             });
         }
     }

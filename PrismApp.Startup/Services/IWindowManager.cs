@@ -8,6 +8,6 @@ namespace PrismApp.Startup.Services
 {
     public interface IWindowManager
     {
-        void Show();
+        void ShowMainWindow();
     }
 }
