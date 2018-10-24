@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismApp.Core", "PrismApp.C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{837EAB43-1CA4-443F-8EC0-B06E52AEBB2D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismApp.Modules.Sample", "PrismApp.Modules.Sample\PrismApp.Modules.Sample.csproj", "{DCBD7053-2583-439F-AD2F-C6C2ED438482}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,9 +25,16 @@ Global
 		{3288794A-8673-4BDE-B4F0-CCC0381F15B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3288794A-8673-4BDE-B4F0-CCC0381F15B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3288794A-8673-4BDE-B4F0-CCC0381F15B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCBD7053-2583-439F-AD2F-C6C2ED438482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCBD7053-2583-439F-AD2F-C6C2ED438482}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCBD7053-2583-439F-AD2F-C6C2ED438482}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCBD7053-2583-439F-AD2F-C6C2ED438482}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DCBD7053-2583-439F-AD2F-C6C2ED438482} = {837EAB43-1CA4-443F-8EC0-B06E52AEBB2D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {66F30B72-451D-4D69-8EAA-1DF22E7E28C0}

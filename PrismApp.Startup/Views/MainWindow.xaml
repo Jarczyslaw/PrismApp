@@ -4,11 +4,25 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:prism="http://prismlibrary.com/"
+        xmlns:core="clr-namespace:PrismApp.Core;assembly=PrismApp.Core"
         mc:Ignorable="d"
-        Title="{Binding Title}" Height="450" Width="800"
+        Title="{Binding Title}"
+        Width="850"
+        Height="600"
         prism:ViewModelLocator.AutoWireViewModel="True">
+
+    <Window.Resources>
+        <Style TargetType="ContentControl">
+            <Setter Property="Width" Value="400" />
+            <Setter Property="Height" Value="300" />
+            <Setter Property="Margin" Value="5 5 0 5" />
+        </Style>
+    </Window.Resources>
     
-    <Grid>
-        
-    </Grid>
+    <ScrollViewer VerticalScrollBarVisibility="Visible" 
+                  HorizontalScrollBarVisibility="Disabled">
+        <WrapPanel Orientation="Horizontal">
+            <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.Sample}" />
+        </WrapPanel>
+    </ScrollViewer>
 </Window>

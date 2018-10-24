@@ -1,6 +1,9 @@
 ﻿using Prism.Ioc;
 using Prism.Modularity;
+using Prism.Regions;
 using Prism.Unity;
+using PrismApp.Core;
+using PrismApp.Modules.Sample;
 using PrismApp.Startup.Services;
 using PrismApp.Startup.Views;
 using System;
@@ -54,7 +57,9 @@ namespace PrismApp.Startup
         protected override IModuleCatalog CreateModuleCatalog()
         {
             DebugInfo();
-            return base.CreateModuleCatalog();
+            var modules = base.CreateModuleCatalog();
+            modules.AddModule<SampleModule>();
+            return modules;
         }
 
         protected override void RegisterRequiredTypes(IContainerRegistry containerRegistry)
