@@ -3,6 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:prism="http://prismlibrary.com/">
     <prism:PrismApplication.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/PrismApp.Core.UI;component/Resources/Colors.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/PrismApp.Core.UI;component/Resources/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </prism:PrismApplication.Resources>
 </prism:PrismApplication>

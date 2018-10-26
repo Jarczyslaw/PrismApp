@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:prism="http://prismlibrary.com/"
         mc:Ignorable="d"
-        Title="{Binding Title}" Height="250" Width="500"
+        Height="250" 
+        Width="500"
+        Style="{StaticResource WindowStyle}"
         prism:ViewModelLocator.AutoWireViewModel="True">
     
     <Grid>

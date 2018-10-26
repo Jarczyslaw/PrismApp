@@ -10,5 +10,10 @@ namespace PrismApp.Core
     public class ViewModelBase : BindableBase
     {
         public string Title { get; set; }
+
+        public ViewModelBase()
+        {
+            Title = GetType().Name;
+        }
     }
 }

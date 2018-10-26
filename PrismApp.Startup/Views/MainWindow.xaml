@@ -11,14 +11,6 @@
         Height="600"
         prism:ViewModelLocator.AutoWireViewModel="True">
 
-    <Window.Resources>
-        <Style TargetType="ContentControl">
-            <Setter Property="Width" Value="400" />
-            <Setter Property="Height" Value="300" />
-            <Setter Property="Margin" Value="5 5 0 5" />
-        </Style>
-    </Window.Resources>
-    
     <ScrollViewer VerticalScrollBarVisibility="Visible" 
                   HorizontalScrollBarVisibility="Disabled">
         <WrapPanel Orientation="Horizontal">

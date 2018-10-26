@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3288794A-8673-4BDE-B4F0-CCC0381F15B1}</ProjectGuid>
+    <ProjectGuid>{43D57C3A-B999-40CC-B357-61F686F60B65}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PrismApp.Core</RootNamespace>
