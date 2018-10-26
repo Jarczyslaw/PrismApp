@@ -5,6 +5,7 @@ using Prism.Unity;
 using PrismApp.Core;
 using PrismApp.Modules.Sample;
 using PrismApp.Startup.Services;
+using PrismApp.Startup.Utilities;
 using PrismApp.Startup.Views;
 using System;
 using System.Collections.Generic;
@@ -44,6 +45,7 @@ namespace PrismApp.Startup
         protected override Window CreateShell()
         {
             DebugInfo();
+            LoadApplicationResources();
             return new Shell();
         }
 
@@ -78,6 +80,12 @@ namespace PrismApp.Startup
         {
             if (!string.IsNullOrEmpty(callerName))
                 Debug.WriteLine(callerName);
+        }
+
+        private void LoadApplicationResources()
+        {
+            AppResourcesLoader.LoadColors();
+            AppResourcesLoader.LoadStyles();
         }
     }
 }

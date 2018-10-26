@@ -84,6 +84,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PrismApp.Core.UI\PrismApp.Core.UI.csproj">
+      <Project>{3288794a-8673-4bde-b4f0-ccc0381f15b1}</Project>
+      <Name>PrismApp.Core.UI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PrismApp.Core\PrismApp.Core.csproj">
       <Project>{43d57c3a-b999-40cc-b357-61f686f60b65}</Project>
       <Name>PrismApp.Core</Name>

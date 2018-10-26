@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Height="250" 
         Width="500"
-        Style="{StaticResource WindowStyle}"
         prism:ViewModelLocator.AutoWireViewModel="True">
     
     <Grid>
