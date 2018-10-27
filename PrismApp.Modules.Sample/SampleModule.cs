@@ -10,16 +10,11 @@ using System.Threading.Tasks;
 
 namespace PrismApp.Modules.Sample
 {
-    public class SampleModule : IModule
+    public class SampleModule : ModuleBase
     {
-        public void OnInitialized(IContainerProvider containerProvider)
+        public override void RegisterRegion(IRegionManager regionManager)
         {
-            var regionManager = containerProvider.Resolve<IRegionManager>();
             regionManager.RegisterViewWithRegion(ModuleNames.Sample, typeof(SampleView));
-        }
-
-        public void RegisterTypes(IContainerRegistry containerRegistry)
-        {
         }
     }
 }
