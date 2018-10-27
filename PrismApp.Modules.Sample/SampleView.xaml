@@ -4,28 +4,20 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PrismApp.Modules.Sample"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:ui="http://jtjt.pl/UI"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
-             xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True"
              Style="{StaticResource ModuleStyle}">
+    
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-
-        <TextBlock Grid.Row="1" 
+        <ui:CenterContainer>
+            <TextBlock Grid.Row="1" 
                    Grid.Column="1" 
                    Text="{Binding Message, FallbackValue=TestMessage}" 
                    FontSize="24"
                    FontWeight="Bold" />
+        </ui:CenterContainer>
     </Grid>
 </UserControl>

@@ -14,9 +14,9 @@
                         </Grid.RowDefinitions>
 
                         <TextBlock Text="{Binding Title, FallbackValue=ModuleName}" 
-                                   FontSize="20"
+                                   FontSize="16"
                                    FontWeight="Bold"
-                                   Margin="5 0 0 0" />
+                                   Margin="5" />
                         <ContentPresenter Grid.Row="1" />
                     </Grid>
                 </ControlTemplate>

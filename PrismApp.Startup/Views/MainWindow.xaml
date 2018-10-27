@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:prism="http://prismlibrary.com/"
-        xmlns:core="clr-namespace:PrismApp.Core;assembly=PrismApp.Core"
+        xmlns:core="http://jtjt.pl/Core"
         mc:Ignorable="d"
         Title="{Binding Title}"
         Width="850"
