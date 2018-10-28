@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PrismApp.Core
 {
-    public class ModuleBase : IModule
+    public abstract class ModuleBase : IModule
     {
         public virtual void OnInitialized(IContainerProvider containerProvider)
         {
@@ -18,6 +18,6 @@ namespace PrismApp.Core
         }
 
         public virtual void RegisterTypes(IContainerRegistry containerRegistry) { }
-        public virtual void RegisterRegion(IRegionManager regionManager) { }
+        public abstract void RegisterRegion(IRegionManager regionManager);
     }
 }
