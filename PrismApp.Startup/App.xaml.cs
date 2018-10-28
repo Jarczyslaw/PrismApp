@@ -26,26 +26,25 @@ namespace PrismApp.Startup
     {
         public override void Initialize()
         {
-            base.Initialize();
             DebugInfo();
+            base.Initialize();
         }
 
         protected override void OnInitialized()
         {
-            base.OnInitialized();
             DebugInfo();
+            base.OnInitialized();
         }
 
         protected override void OnStartup(StartupEventArgs e)
         {
-            base.OnStartup(e);
             DebugInfo();
+            base.OnStartup(e);
         }
 
         protected override Window CreateShell()
         {
             DebugInfo();
-            LoadApplicationResources();
             return new Shell();
         }
 
@@ -80,12 +79,6 @@ namespace PrismApp.Startup
         {
             if (!string.IsNullOrEmpty(callerName))
                 Debug.WriteLine(callerName);
-        }
-
-        private void LoadApplicationResources()
-        {
-            AppResourcesLoader.LoadColors();
-            AppResourcesLoader.LoadStyles();
         }
     }
 }
