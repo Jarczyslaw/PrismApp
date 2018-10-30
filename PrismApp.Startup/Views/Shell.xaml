@@ -8,7 +8,8 @@
         mc:Ignorable="d"
         Height="250" 
         Width="500"
-        prism:ViewModelLocator.AutoWireViewModel="True">
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        Title="{Binding Title}">
     
     <Grid>
         <ui:CenterContainer>

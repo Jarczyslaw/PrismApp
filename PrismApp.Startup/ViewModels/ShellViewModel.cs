@@ -15,9 +15,9 @@ namespace PrismApp.Startup.ViewModels
     {
         public DelegateCommand ShowMainWindowCommand { get; private set; }
 
-        private IWindowManager windowManager;
+        private IPrismWindowManager windowManager;
 
-        public ShellViewModel(IWindowManager windowManager)
+        public ShellViewModel(IPrismWindowManager windowManager)
         {
             this.windowManager = windowManager;
 

@@ -5,7 +5,6 @@ using Prism.Unity;
 using PrismApp.Core;
 using PrismApp.Modules.Sample;
 using PrismApp.Startup.Services;
-using PrismApp.Startup.Utilities;
 using PrismApp.Startup.Views;
 using System;
 using System.Collections.Generic;
@@ -19,9 +18,6 @@ using System.Windows;
 
 namespace PrismApp.Startup
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
     public partial class App : PrismApplication
     {
         public override void Initialize()
@@ -72,7 +68,8 @@ namespace PrismApp.Startup
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             DebugInfo();
-            containerRegistry.Register<IWindowManager, WindowManager>();
+            containerRegistry.Register<IPrismWindowManager, PrismWindowsManager>();
+            containerRegistry.Register<IAppResourcesLoader, AppResourcesLoader>();
         }
 
         private void DebugInfo([CallerMemberName]string callerName = "")

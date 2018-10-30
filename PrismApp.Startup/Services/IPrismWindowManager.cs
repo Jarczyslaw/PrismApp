@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PrismApp.Startup.Services
 {
-    public interface IWindowManager
+    public interface IPrismWindowManager
     {
         void ShowMainWindow();
     }
