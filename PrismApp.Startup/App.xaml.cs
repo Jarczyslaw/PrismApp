@@ -41,7 +41,7 @@ namespace PrismApp.Startup
         protected override Window CreateShell()
         {
             DebugInfo();
-            return new Shell();
+            return Container.Resolve<Shell>();
         }
 
         protected override void InitializeShell(Window shell)
@@ -63,13 +63,13 @@ namespace PrismApp.Startup
         {
             DebugInfo();
             base.RegisterRequiredTypes(containerRegistry);
+            containerRegistry.Register<IPrismWindowManager, PrismWindowsManager>();
+            containerRegistry.Register<IAppResourcesLoader, AppResourcesLoader>();
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             DebugInfo();
-            containerRegistry.Register<IPrismWindowManager, PrismWindowsManager>();
-            containerRegistry.Register<IAppResourcesLoader, AppResourcesLoader>();
         }
 
         private void DebugInfo([CallerMemberName]string callerName = "")
