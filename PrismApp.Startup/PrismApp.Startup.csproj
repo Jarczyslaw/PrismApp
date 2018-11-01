@@ -134,6 +134,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Modules\PrismApp.Modules.Commands\PrismApp.Modules.Commands.csproj">
+      <Project>{C772D4BB-C15C-4F98-9B7F-000F31A237FD}</Project>
+      <Name>PrismApp.Modules.Commands</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Modules\PrismApp.Modules.Sample\PrismApp.Modules.Sample.csproj">
       <Project>{dcbd7053-2583-439f-ad2f-c6c2ed438482}</Project>
       <Name>PrismApp.Modules.Sample</Name>

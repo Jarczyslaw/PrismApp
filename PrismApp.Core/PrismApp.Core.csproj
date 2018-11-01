@@ -64,6 +64,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationCommands.cs" />
+    <Compile Include="AssemblyExtensions.cs" />
+    <Compile Include="IApplicationCommands.cs" />
     <Compile Include="ModuleBase.cs" />
     <Compile Include="ModuleNames.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

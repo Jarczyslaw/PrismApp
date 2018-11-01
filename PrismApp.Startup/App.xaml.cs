@@ -3,6 +3,7 @@ using Prism.Modularity;
 using Prism.Regions;
 using Prism.Unity;
 using PrismApp.Core;
+using PrismApp.Modules.Commands;
 using PrismApp.Modules.Sample;
 using PrismApp.Startup.Services;
 using PrismApp.Startup.Views;
@@ -56,6 +57,7 @@ namespace PrismApp.Startup
             DebugInfo();
             var modules = base.CreateModuleCatalog();
             modules.AddModule<SampleModule>();
+            modules.AddModule<CommandsModule>();
             return modules;
         }
 
@@ -70,6 +72,7 @@ namespace PrismApp.Startup
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             DebugInfo();
+            containerRegistry.RegisterSingleton<IApplicationCommands, ApplicationCommands>();
         }
 
         private void DebugInfo([CallerMemberName]string callerName = "")

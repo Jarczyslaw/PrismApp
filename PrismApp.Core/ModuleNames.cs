@@ -9,5 +9,6 @@ namespace PrismApp.Core
     public static class ModuleNames
     {
         public static string Sample { get; } = "Sample";
+        public static string Commands { get; } = "Commands";
     }
 }
