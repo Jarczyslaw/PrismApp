@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismApp.Core.UI", "PrismAp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{837EAB43-1CA4-443F-8EC0-B06E52AEBB2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismApp.Modules.Sample", "PrismApp.Modules.Sample\PrismApp.Modules.Sample.csproj", "{DCBD7053-2583-439F-AD2F-C6C2ED438482}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismApp.Modules.Sample", "Modules\PrismApp.Modules.Sample\PrismApp.Modules.Sample.csproj", "{DCBD7053-2583-439F-AD2F-C6C2ED438482}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismApp.Core", "PrismApp.Core\PrismApp.Core.csproj", "{43D57C3A-B999-40CC-B357-61F686F60B65}"
 EndProject
