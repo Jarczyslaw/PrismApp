@@ -21,8 +21,9 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
-                <ContentPresenter VerticalAlignment="Stretch"  HorizontalAlignment="Stretch" Grid.Row="1"
-                          Grid.Column="1" />
+                <ContentPresenter VerticalAlignment="Stretch"  
+                                  HorizontalAlignment="Stretch" Grid.Row="1"
+                    Grid.Column="1" />
             </Grid>
         </ControlTemplate>
     </UserControl.Template>

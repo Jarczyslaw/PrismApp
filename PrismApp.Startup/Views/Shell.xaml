@@ -10,7 +10,7 @@
         Width="500"
         prism:ViewModelLocator.AutoWireViewModel="True"
         Title="{Binding Title}">
-    
+
     <Grid>
         <ui:CenterContainer>
             <StackPanel Grid.Row="1"
