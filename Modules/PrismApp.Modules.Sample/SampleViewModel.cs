@@ -14,7 +14,7 @@ namespace PrismApp.Modules.Sample
 
         public SampleViewModel()
         {
-            Title = GetCorrespondingModuleName(Assembly.GetExecutingAssembly());
+            Title = GetModuleTitle(Assembly.GetExecutingAssembly());
         }
     }
 }

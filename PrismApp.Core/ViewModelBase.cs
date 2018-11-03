@@ -21,7 +21,7 @@ namespace PrismApp.Core
             MainCommand = new DelegateCommand(MainCommandAction);
         }
 
-        protected string GetCorrespondingModuleName(Assembly assembly)
+        protected string GetModuleTitle(Assembly assembly)
         {
             var modules = assembly.FindDerivedTypes(typeof(ModuleBase));
             return modules.SingleOrDefault().Name;

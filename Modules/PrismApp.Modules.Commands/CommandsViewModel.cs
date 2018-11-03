@@ -59,7 +59,7 @@ namespace PrismApp.Modules.Commands
         {
             ApplicationCommands = applicationCommands;
 
-            Title = GetCorrespondingModuleName(Assembly.GetExecutingAssembly());
+            Title = GetModuleTitle(Assembly.GetExecutingAssembly());
 
             IncrementCommand = new DelegateCommand(Increment)
                 .ObservesCanExecute(() => IsEnabled);
