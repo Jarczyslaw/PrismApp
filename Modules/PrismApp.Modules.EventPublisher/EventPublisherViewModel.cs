@@ -1,5 +1,6 @@
 ﻿using Prism.Commands;
 using Prism.Events;
+using PrismApp.Core;
 using PrismApp.Core.Base;
 using PrismApp.Core.Events;
 using System;
@@ -13,13 +14,6 @@ namespace PrismApp.Modules.EventPublisher
 {
     public class EventPublisherViewModel : ViewModelBase
     {
-        private bool isMulticast = false;
-        public bool IsMulticast
-        {
-            get { return isMulticast; }
-            set { SetProperty(ref isMulticast, value); }
-        }
-
         private string messageContent = string.Empty;
         public string MessageContent
         {
@@ -27,7 +21,7 @@ namespace PrismApp.Modules.EventPublisher
             set { SetProperty(ref messageContent, value); }
         }
 
-        private int currentId = 0;
+        private int currentId = 1;
         public int CurrentId
         {
             get { return currentId; }
@@ -45,28 +39,24 @@ namespace PrismApp.Modules.EventPublisher
 
         private IEventAggregator eventAggregator;
 
-        public EventPublisherViewModel(IEventAggregator eventAggregator)
+        public EventPublisherViewModel(IEventAggregator eventAggregator, IApplicationCommands applicationCommands) 
         {
             this.eventAggregator = eventAggregator;
 
             Title = GetModuleTitle(Assembly.GetExecutingAssembly());
 
             PublishCommand = new DelegateCommand(Publish);
+            applicationCommands.MainCommand.RegisterCommand(MainCommand);
         }
 
         private void Publish()
         {
-            SendStatus = string.Empty;
-            if (string.IsNullOrEmpty(MessageContent))
-            {
-                SendStatus = "Message can not be empty";
+            if (!Validate())
                 return;
-            }
                 
             var message = new Message
             {
                 Id = CurrentId,
-                IsMulticast = IsMulticast,
                 Content = MessageContent,
                 Date = DateTime.Now
             };
@@ -74,6 +64,18 @@ namespace PrismApp.Modules.EventPublisher
 
             MessageContent = string.Empty;
             CurrentId++;
+        }
+
+        private bool Validate()
+        {
+            SendStatus = string.Empty;
+            if (string.IsNullOrEmpty(MessageContent))
+            {
+                SendStatus = "Message can not be empty";
+                return false;
+            }
+
+            return true;
         }
     }
 }

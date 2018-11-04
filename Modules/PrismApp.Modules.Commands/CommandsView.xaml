@@ -23,7 +23,7 @@
             <StackPanel>
                 <Button Content="Increment"
                     Command="{Binding IncrementCommand}" />
-                <TextBlock Text="{Binding CounterValue, StringFormat=Counter value: {0}}" />
+                <TextBlock Text="{Binding CounterValue, StringFormat='Counter value: {0}'}" />
             </StackPanel>
         </GroupBox>
 

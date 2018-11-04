@@ -142,6 +142,10 @@
       <Project>{44e768ba-28c2-4d53-bb0b-4a6ec556be1b}</Project>
       <Name>PrismApp.Modules.EventPublisher</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Modules\PrismApp.Modules.EventSubscriber\PrismApp.Modules.EventSubscriber.csproj">
+      <Project>{44c3c655-35a0-482f-aee0-19a167036395}</Project>
+      <Name>PrismApp.Modules.EventSubscriber</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Modules\PrismApp.Modules.Sample\PrismApp.Modules.Sample.csproj">
       <Project>{dcbd7053-2583-439f-ad2f-c6c2ed438482}</Project>
       <Name>PrismApp.Modules.Sample</Name>

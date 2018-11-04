@@ -10,11 +10,8 @@
              prism:ViewModelLocator.AutoWireViewModel="True"
              Style="{StaticResource ModuleStyle}">
     <StackPanel>
-        <CheckBox Content="Multicast message"
-                  IsChecked="{Binding IsMulticast}"
-                  Margin="5" />
 
-        <TextBlock Text="{Binding CurrentId, StringFormat=Current message id: {0}}"
+        <TextBlock Text="{Binding CurrentId, StringFormat='Current message id: {0}'}"
                    Margin="5" />
 
         <GroupBox Header="Publishing">

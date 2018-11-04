@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="PrismApp.Modules.EventSubscriber.EventSubscriberView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PrismApp.Modules.EventSubscriber"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:ui="http://jtjt.pl/UI"
+             mc:Ignorable="d" 
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             Style="{StaticResource ModuleStyle}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <CheckBox Grid.Row="0" 
+                  Content="Receive messages"
+                  IsChecked="{Binding ReceiveMessages}"
+                  Margin="5" />
+
+        <ListView Grid.Row="1" 
+                  ItemsSource="{Binding Messages}"
+                  Margin="5"
+                  VerticalAlignment="Stretch">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Id" Width="50" DisplayMemberBinding="{Binding Id}" />
+                    <GridViewColumn Header="Time" Width="80" DisplayMemberBinding="{Binding Date, StringFormat='HH:mm:ss'}" />
+                    <GridViewColumn Header="Message content" Width="230" DisplayMemberBinding="{Binding Content}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <TextBlock Grid.Row="2"
+                   Text="{Binding Messages.Count, StringFormat='Received messages: {0}'}"
+                   Margin="5" />
+    </Grid>
+</UserControl>

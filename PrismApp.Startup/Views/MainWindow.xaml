@@ -7,7 +7,7 @@
         xmlns:core="http://jtjt.pl/Core"
         mc:Ignorable="d"
         Title="{Binding Title}"
-        Width="850"
+        Width="1250"
         Height="800"
         prism:ViewModelLocator.AutoWireViewModel="True">
 
@@ -17,6 +17,8 @@
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.Sample}" />
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.Commands}" />
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.EventPublisher}" />
+            <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.EventSubscriber}" />
+            <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.EventSubscriber}" />
         </WrapPanel>
     </ScrollViewer>
 </Window>

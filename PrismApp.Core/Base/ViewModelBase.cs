@@ -29,7 +29,7 @@ namespace PrismApp.Core.Base
             return modules.SingleOrDefault().Name;
         }
 
-        private void MainCommandAction()
+        protected virtual void MainCommandAction()
         {
             Debug.WriteLine("Main action invoked in: " + GetType().Name);
         }
