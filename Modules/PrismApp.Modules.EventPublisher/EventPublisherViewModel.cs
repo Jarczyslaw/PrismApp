@@ -14,7 +14,7 @@ namespace PrismApp.Modules.EventPublisher
 {
     public class EventPublisherViewModel : ViewModelBase
     {
-        private string messageContent = string.Empty;
+        private string messageContent = "Test message";
         public string MessageContent
         {
             get { return messageContent; }
