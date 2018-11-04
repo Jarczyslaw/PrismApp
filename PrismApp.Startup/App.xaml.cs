@@ -57,12 +57,7 @@ namespace PrismApp.Startup
         protected override IModuleCatalog CreateModuleCatalog()
         {
             DebugInfo();
-            var modules = base.CreateModuleCatalog();
-            modules.AddModule<SampleModule>();
-            modules.AddModule<CommandsModule>();
-            modules.AddModule<EventPublisherModule>();
-            modules.AddModule<EventSubscriberModule>();
-            return modules;
+            return GetModules();
         }
 
         protected override void RegisterRequiredTypes(IContainerRegistry containerRegistry)
@@ -77,6 +72,16 @@ namespace PrismApp.Startup
         {
             DebugInfo();
             containerRegistry.RegisterSingleton<IApplicationCommands, ApplicationCommands>();
+        }
+
+        private IModuleCatalog GetModules()
+        {
+            var modules = base.CreateModuleCatalog();
+            modules.AddModule<SampleModule>();
+            modules.AddModule<CommandsModule>();
+            modules.AddModule<EventPublisherModule>();
+            modules.AddModule<EventSubscriberModule>();
+            return modules;
         }
 
         private void DebugInfo([CallerMemberName]string callerName = "")
