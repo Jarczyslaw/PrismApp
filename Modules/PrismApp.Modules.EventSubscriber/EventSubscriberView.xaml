@@ -14,6 +14,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         
         <CheckBox Grid.Row="0" 
@@ -37,5 +38,10 @@
         <TextBlock Grid.Row="2"
                    Text="{Binding Messages.Count, StringFormat='Received messages: {0}'}"
                    Margin="5" />
+
+        <Button Grid.Row="3" 
+                Command="{Binding ClearCommand}"
+                Content="Clear"
+                Margin="5" />
     </Grid>
 </UserControl>

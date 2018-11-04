@@ -1,4 +1,5 @@
-﻿using Prism.Events;
+﻿using Prism.Commands;
+using Prism.Events;
 using PrismApp.Core.Base;
 using PrismApp.Core.Events;
 using System;
@@ -22,6 +23,8 @@ namespace PrismApp.Modules.EventSubscriber
 
         public ObservableCollection<MessageViewModel> Messages { get; private set; }
 
+        public DelegateCommand ClearCommand { get; private set; }
+
         private IEventAggregator eventAggregator;
 
         public EventSubscriberViewModel(IEventAggregator eventAggregator)
@@ -31,6 +34,8 @@ namespace PrismApp.Modules.EventSubscriber
             Messages = new ObservableCollection<MessageViewModel>();
             this.eventAggregator = eventAggregator;
             eventAggregator.GetEvent<MessageEvent>().Subscribe(MessageReceived, ThreadOption.UIThread, false, m => ReceiveMessages);
+
+            ClearCommand = new DelegateCommand(() => Messages.Clear());
         }
 
         private void MessageReceived(Message message)
