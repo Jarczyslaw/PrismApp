@@ -1,6 +1,7 @@
 ﻿using Prism.Commands;
 using Prism.Mvvm;
 using PrismApp.Core;
+using PrismApp.Core.Base;
 using PrismApp.Startup.Services;
 using System;
 using System.Collections.Generic;

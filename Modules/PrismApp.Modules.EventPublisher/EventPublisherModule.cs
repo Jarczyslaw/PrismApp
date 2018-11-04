@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PrismApp.Modules.Commands
+namespace PrismApp.Modules.EventPublisher
 {
-    public class CommandsModule : ModuleBase
+    public class EventPublisherModule : ModuleBase
     {
         public override void RegisterRegion(IRegionManager regionManager)
         {
-            regionManager.RegisterViewWithRegion(ModuleNames.Commands, typeof(CommandsView));
+            regionManager.RegisterViewWithRegion(ModuleNames.EventPublisher, typeof(EventPublisherView));
         }
     }
 }

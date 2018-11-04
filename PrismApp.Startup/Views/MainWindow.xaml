@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="{Binding Title}"
         Width="850"
-        Height="600"
+        Height="800"
         prism:ViewModelLocator.AutoWireViewModel="True">
 
     <ScrollViewer VerticalScrollBarVisibility="Visible" 
@@ -16,6 +16,7 @@
         <WrapPanel Orientation="Horizontal">
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.Sample}" />
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.Commands}" />
+            <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.EventPublisher}" />
         </WrapPanel>
     </ScrollViewer>
 </Window>

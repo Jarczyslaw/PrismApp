@@ -10,5 +10,7 @@ namespace PrismApp.Core
     {
         public static string Sample { get; } = "Sample";
         public static string Commands { get; } = "Commands";
+        public static string EventPublisher { get; } = "EventPublisher";
+        public static string EventSubscriber { get; } = "EventSubscriber";
     }
 }

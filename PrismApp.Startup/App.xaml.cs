@@ -4,6 +4,7 @@ using Prism.Regions;
 using Prism.Unity;
 using PrismApp.Core;
 using PrismApp.Modules.Commands;
+using PrismApp.Modules.EventPublisher;
 using PrismApp.Modules.Sample;
 using PrismApp.Startup.Services;
 using PrismApp.Startup.Views;
@@ -58,6 +59,7 @@ namespace PrismApp.Startup
             var modules = base.CreateModuleCatalog();
             modules.AddModule<SampleModule>();
             modules.AddModule<CommandsModule>();
+            modules.AddModule<EventPublisherModule>();
             return modules;
         }
 

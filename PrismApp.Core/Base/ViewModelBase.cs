@@ -1,5 +1,6 @@
 ﻿using Prism.Commands;
 using Prism.Mvvm;
+using PrismApp.Core.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -8,7 +9,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PrismApp.Core
+namespace PrismApp.Core.Base
 {
     public class ViewModelBase : BindableBase
     {
@@ -18,6 +19,7 @@ namespace PrismApp.Core
 
         public ViewModelBase()
         {
+            Title = GetType().Name;
             MainCommand = new DelegateCommand(MainCommandAction);
         }
 

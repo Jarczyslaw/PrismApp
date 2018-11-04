@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PrismApp.Core
+namespace PrismApp.Core.Base
 {
     public abstract class ModuleBase : IModule
     {

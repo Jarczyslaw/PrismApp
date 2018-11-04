@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PrismApp.Core
+namespace PrismApp.Core.Extensions
 {
     public static class AssemblyExtensions
     {
