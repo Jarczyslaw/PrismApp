@@ -9,7 +9,8 @@
         Title="{Binding Title}"
         Width="1250"
         Height="800"
-        prism:ViewModelLocator.AutoWireViewModel="True">
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        WindowStartupLocation="CenterScreen">
 
     <ScrollViewer VerticalScrollBarVisibility="Visible" 
                   HorizontalScrollBarVisibility="Disabled">

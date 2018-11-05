@@ -9,7 +9,8 @@
         Height="250" 
         Width="500"
         prism:ViewModelLocator.AutoWireViewModel="True"
-        Title="{Binding Title}">
+        Title="{Binding Title}"
+        WindowStartupLocation="CenterScreen">
 
     <Grid>
         <ui:CenterContainer>
