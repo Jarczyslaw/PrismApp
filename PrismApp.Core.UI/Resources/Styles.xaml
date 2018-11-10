@@ -7,18 +7,21 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="UserControl">
-                    <Grid Background="{StaticResource ModuleBackgroundBrush}">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="*" />
-                        </Grid.RowDefinitions>
+                    <Border BorderThickness="1"
+                            BorderBrush="{StaticResource ModuleBorderBrush}">
+                        <Grid Background="{StaticResource ModuleBackgroundBrush}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
 
-                        <TextBlock Text="{Binding Title, FallbackValue=ModuleName}" 
+                            <TextBlock Text="{Binding Title, FallbackValue='ModuleName'}" 
                                    FontSize="16"
                                    FontWeight="Bold"
                                    Margin="5" />
-                        <ContentPresenter Grid.Row="1" />
-                    </Grid>
+                            <ContentPresenter Grid.Row="1" />
+                        </Grid>
+                    </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
