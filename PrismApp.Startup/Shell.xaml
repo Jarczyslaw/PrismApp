@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="{Binding Title}"
         Width="1250"
-        Height="800"
+        Height="980"
         prism:ViewModelLocator.AutoWireViewModel="True"
         WindowStartupLocation="CenterScreen">
 
@@ -21,6 +21,7 @@
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.EventPublisher}" />
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.EventSubscriber1}" />
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.EventSubscriber2}" />
+            <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.ViewsActivation}" />
         </WrapPanel>
     </ScrollViewer>
 </Window>

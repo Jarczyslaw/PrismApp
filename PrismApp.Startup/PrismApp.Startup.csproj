@@ -136,6 +136,10 @@
       <Project>{dcbd7053-2583-439f-ad2f-c6c2ed438482}</Project>
       <Name>PrismApp.Modules.Sample</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Modules\PrismApp.Modules.ViewsActivation\PrismApp.Modules.ViewsActivation.csproj">
+      <Project>{3916752e-a9fa-45db-bbe4-fecf6d7889f0}</Project>
+      <Name>PrismApp.Modules.ViewsActivation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Modules\PrismApp.Modules.Windows\PrismApp.Modules.Windows.csproj">
       <Project>{315934a7-1587-4368-856d-9a0edebbd004}</Project>
       <Name>PrismApp.Modules.Windows</Name>
