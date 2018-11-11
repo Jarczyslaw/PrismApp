@@ -24,6 +24,13 @@ namespace PrismApp.Core.Services
             Show(window, null);
         }
 
+        public void CreateModalWindow<T>()
+            where T : Window
+        {
+            var window = container.Resolve<T>();
+            ShowModal(window, null);
+        }
+
         public void CreateOrRestoreWindow<T>()
             where T : Window
         {

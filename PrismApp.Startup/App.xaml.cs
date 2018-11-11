@@ -8,6 +8,7 @@ using PrismApp.Modules.Commands;
 using PrismApp.Modules.EventPublisher;
 using PrismApp.Modules.EventSubscriber;
 using PrismApp.Modules.Sample;
+using PrismApp.Modules.Windows;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -77,6 +78,7 @@ namespace PrismApp.Startup
         {
             var modules = base.CreateModuleCatalog();
             modules.AddModule<SampleModule>();
+            modules.AddModule<WindowsModule>();
             modules.AddModule<CommandsModule>();
             modules.AddModule<EventPublisherModule>();
             modules.AddModule<EventSubscriberModule>();

@@ -10,6 +10,7 @@ namespace PrismApp.Core.Services
     public interface IPrismWindowsManager
     {
         void CreateWindow<T>() where T : Window;
+        void CreateModalWindow<T>() where T : Window;
         void CreateOrRestoreWindow<T>() where T : Window;
     }
 }

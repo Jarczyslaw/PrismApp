@@ -16,6 +16,7 @@
                   HorizontalScrollBarVisibility="Disabled">
         <WrapPanel Orientation="Horizontal">
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.Sample}" />
+            <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.Windows}" />
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.Commands}" />
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.EventPublisher}" />
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.EventSubscriber1}" />

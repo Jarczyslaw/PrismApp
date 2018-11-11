@@ -13,5 +13,6 @@ namespace PrismApp.Core
         public static string EventPublisher { get; } = "EventPublisher";
         public static string EventSubscriber1 { get; } = "EventSubscriber1";
         public static string EventSubscriber2 { get; } = "EventSubscriber2";
+        public static string Windows { get; } = "Windows";
     }
 }

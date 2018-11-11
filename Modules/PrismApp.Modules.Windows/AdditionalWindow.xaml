@@ -1,0 +1,18 @@
+﻿<Window x:Class="PrismApp.Modules.Windows.AdditionalWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PrismApp.Modules.Windows"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:ui="http://jtjt.pl/UI"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        mc:Ignorable="d"
+        Title="{Binding Title}" Height="450" Width="800">
+    <Grid>
+        <ui:CenterContainer>
+            <TextBlock Text="{Binding Message}"
+                       FontSize="32" />
+        </ui:CenterContainer>
+    </Grid>
+</Window>

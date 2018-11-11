@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="PrismApp.Modules.Windows.WindowsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PrismApp.Modules.Windows"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:ui="http://jtjt.pl/UI"
+             mc:Ignorable="d" 
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             Style="{StaticResource ModuleStyle}">
+    <Grid>
+        <ui:CenterContainer>
+            <StackPanel Orientation="Vertical">
+                <Button Content="Show new window" 
+                        Command="{Binding ShowWindowCommand}" />
+                <Button Content="Show one instance window" 
+                        Command="{Binding ShowOneInstanceWindowCommand}" />
+                <Button Content="Show modal window" 
+                        Command="{Binding ShowModalWindowCommand}" />
+            </StackPanel>
+            
+        </ui:CenterContainer>    
+    </Grid>
+</UserControl>
