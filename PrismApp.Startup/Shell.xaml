@@ -1,4 +1,4 @@
-﻿<Window x:Class="PrismApp.Startup.Views.MainWindow"
+﻿<Window x:Class="PrismApp.Startup.Shell"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -18,8 +18,8 @@
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.Sample}" />
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.Commands}" />
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.EventPublisher}" />
-            <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.EventSubscriber}" />
-            <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.EventSubscriber}" />
+            <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.EventSubscriber1}" />
+            <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.EventSubscriber2}" />
         </WrapPanel>
     </ScrollViewer>
 </Window>

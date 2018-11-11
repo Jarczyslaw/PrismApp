@@ -1,5 +1,5 @@
 ﻿using Prism.Ioc;
-using PrismApp.Startup.Views;
+using PrismApp.Startup;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +20,7 @@ namespace PrismApp.Startup.Services
 
         public void ShowMainWindow()
         {
-            CreateOrRestoreWindow<MainWindow>();
+            //CreateOrRestoreWindow<MainWindow>();
         }
 
         public void CreateOrRestoreWindow<T>()

@@ -8,7 +8,6 @@ using PrismApp.Modules.EventPublisher;
 using PrismApp.Modules.EventSubscriber;
 using PrismApp.Modules.Sample;
 using PrismApp.Startup.Services;
-using PrismApp.Startup.Views;
 using System;
 using System.Collections.Generic;
 using System.Configuration;

@@ -11,7 +11,7 @@ namespace PrismApp.Modules.Sample
 {
     public class SampleViewModel : ViewModelBase
     {
-        public string Message { get; } = "Message from Sample Module";
+        public string Message { get; } = "Prism Sample App";
 
         public SampleViewModel()
         {
