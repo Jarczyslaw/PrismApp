@@ -64,8 +64,8 @@ namespace PrismApp.Startup
         {
             DebugInfo();
             base.RegisterRequiredTypes(containerRegistry);
-            containerRegistry.Register<IPrismWindowManager, PrismWindowsManager>();
-            containerRegistry.Register<IAppResourcesLoader, AppResourcesLoader>();
+            containerRegistry.RegisterSingleton<IPrismWindowManager, PrismWindowsManager>();
+            containerRegistry.RegisterSingleton<IAppResourcesLoader, AppResourcesLoader>();
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
