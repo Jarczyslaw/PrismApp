@@ -81,12 +81,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Services\IAppResourcesLoader.cs" />
-    <Compile Include="Services\IPrismWindowManager.cs" />
-    <Compile Include="Services\IWindowsManager.cs" />
-    <Compile Include="Services\PrismWindowsManager.cs" />
-    <Compile Include="Services\AppResourcesLoader.cs" />
-    <Compile Include="Services\WindowsManager.cs" />
     <Compile Include="ShellViewModel.cs" />
     <Compile Include="Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>
@@ -141,6 +135,10 @@
     <ProjectReference Include="..\Modules\PrismApp.Modules.Sample\PrismApp.Modules.Sample.csproj">
       <Project>{dcbd7053-2583-439f-ad2f-c6c2ed438482}</Project>
       <Name>PrismApp.Modules.Sample</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PrismApp.Core.Services\PrismApp.Core.Services.csproj">
+      <Project>{3d13d6f5-0e14-4440-be95-b634ca700c07}</Project>
+      <Name>PrismApp.Core.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\PrismApp.Core.UI\PrismApp.Core.UI.csproj">
       <Project>{3288794a-8673-4bde-b4f0-ccc0381f15b1}</Project>

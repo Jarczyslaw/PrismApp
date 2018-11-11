@@ -2,7 +2,6 @@
 using Prism.Mvvm;
 using PrismApp.Core;
 using PrismApp.Core.Base;
-using PrismApp.Startup.Services;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -14,21 +13,9 @@ namespace PrismApp.Startup
 {
     public class ShellViewModel : ViewModelBase
     {
-        public DelegateCommand ShowMainWindowCommand { get; private set; }
-
-        private IPrismWindowManager windowManager;
-
-        public ShellViewModel(IPrismWindowManager windowManager)
+        public ShellViewModel()
         {
-            this.windowManager = windowManager;
-
             Title = "Prism Sample App";
-
-            ShowMainWindowCommand = new DelegateCommand(() =>
-            {
-                Debug.WriteLine("Show main window");
-                windowManager.ShowMainWindow();
-            });
         }
     }
 }

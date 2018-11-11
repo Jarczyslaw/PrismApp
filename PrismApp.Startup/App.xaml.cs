@@ -3,11 +3,11 @@ using Prism.Modularity;
 using Prism.Regions;
 using Prism.Unity;
 using PrismApp.Core;
+using PrismApp.Core.Services;
 using PrismApp.Modules.Commands;
 using PrismApp.Modules.EventPublisher;
 using PrismApp.Modules.EventSubscriber;
 using PrismApp.Modules.Sample;
-using PrismApp.Startup.Services;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -63,7 +63,7 @@ namespace PrismApp.Startup
         {
             DebugInfo();
             base.RegisterRequiredTypes(containerRegistry);
-            containerRegistry.RegisterSingleton<IPrismWindowManager, PrismWindowsManager>();
+            containerRegistry.RegisterSingleton<IPrismWindowsManager, PrismWindowsManager>();
             containerRegistry.RegisterSingleton<IAppResourcesLoader, AppResourcesLoader>();
         }
 

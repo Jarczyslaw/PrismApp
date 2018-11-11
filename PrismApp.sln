@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismApp.Modules.EventPubli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismApp.Modules.EventSubscriber", "Modules\PrismApp.Modules.EventSubscriber\PrismApp.Modules.EventSubscriber.csproj", "{44C3C655-35A0-482F-AEE0-19A167036395}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismApp.Core.Services", "PrismApp.Core.Services\PrismApp.Core.Services.csproj", "{3D13D6F5-0E14-4440-BE95-B634CA700C07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{44C3C655-35A0-482F-AEE0-19A167036395}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44C3C655-35A0-482F-AEE0-19A167036395}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44C3C655-35A0-482F-AEE0-19A167036395}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D13D6F5-0E14-4440-BE95-B634CA700C07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D13D6F5-0E14-4440-BE95-B634CA700C07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D13D6F5-0E14-4440-BE95-B634CA700C07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D13D6F5-0E14-4440-BE95-B634CA700C07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

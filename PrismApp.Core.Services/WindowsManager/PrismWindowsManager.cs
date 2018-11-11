@@ -1,5 +1,4 @@
 ﻿using Prism.Ioc;
-using PrismApp.Startup;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace PrismApp.Startup.Services
+namespace PrismApp.Core.Services
 {
-    public class PrismWindowsManager : WindowsManager, IPrismWindowManager
+    public class PrismWindowsManager : WindowsManager, IPrismWindowsManager
     {
         private IContainerExtension container;
 
@@ -18,19 +17,18 @@ namespace PrismApp.Startup.Services
             this.container = container;
         }
 
-        public void ShowMainWindow()
+        public void CreateWindow<T>()
+            where T : Window
         {
-            //CreateOrRestoreWindow<MainWindow>();
+            var window = container.Resolve<T>();
+            Show(window, null);
         }
 
         public void CreateOrRestoreWindow<T>()
-            where T : Window, new()
+            where T : Window
         {
             if (!IsWindowOpen<T>())
-            {
-                var window = container.Resolve<T>();
-                Show(window, null);
-            }  
+                CreateWindow<T>();
             else
                 RestoreWindows<T>();
         }

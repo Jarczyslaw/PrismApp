@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace PrismApp.Startup.Services
+namespace PrismApp.Core.Services
 {
     public interface IAppResourcesLoader
     {
