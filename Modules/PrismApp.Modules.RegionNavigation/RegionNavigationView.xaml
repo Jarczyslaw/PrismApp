@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="PrismApp.Modules.RegionNavigation.RegionNavigationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PrismApp.Modules.RegionNavigation"
+             xmlns:common="clr-namespace:PrismApp.Modules.Common.Views;assembly=PrismApp.Modules.Common"
+             mc:Ignorable="d" 
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:ui="http://jtjt.pl/UI"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             Style="{StaticResource ModuleStyle}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <Button Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type common:ViewA}"
+                    Content="Show ViewA" />
+            <Button Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type common:ViewB}"
+                    Content="Show ViewB" />
+        </StackPanel>
+
+        <ContentControl Grid.Row="1" 
+                        prism:RegionManager.RegionName="{x:Static local:RegionNavigationModule.ContentRegion}" />
+    </Grid>
+</UserControl>

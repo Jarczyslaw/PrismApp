@@ -7,6 +7,7 @@ using PrismApp.Core.Services;
 using PrismApp.Modules.Commands;
 using PrismApp.Modules.EventPublisher;
 using PrismApp.Modules.EventSubscriber;
+using PrismApp.Modules.RegionNavigation;
 using PrismApp.Modules.Sample;
 using PrismApp.Modules.ViewsActivation;
 using PrismApp.Modules.Windows;
@@ -84,6 +85,7 @@ namespace PrismApp.Startup
             modules.AddModule<EventPublisherModule>();
             modules.AddModule<EventSubscriberModule>();
             modules.AddModule<ViewsActivationModule>();
+            modules.AddModule<RegionNavigationModule>();
             return modules;
         }
 

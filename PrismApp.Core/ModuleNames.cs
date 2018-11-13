@@ -16,5 +16,6 @@ namespace PrismApp.Core
         public static string EventSubscriber2 => nameof(EventSubscriber2);
         public static string Windows => nameof(Windows);
         public static string ViewsActivation => nameof(ViewsActivation);
+        public static string RegionNavigation => nameof(RegionNavigation);
     }
 }

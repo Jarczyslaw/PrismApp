@@ -132,6 +132,10 @@
       <Project>{44c3c655-35a0-482f-aee0-19a167036395}</Project>
       <Name>PrismApp.Modules.EventSubscriber</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Modules\PrismApp.Modules.RegionNavigation\PrismApp.Modules.RegionNavigation.csproj">
+      <Project>{7708e193-27c5-419d-9641-fd48a9298d18}</Project>
+      <Name>PrismApp.Modules.RegionNavigation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Modules\PrismApp.Modules.Sample\PrismApp.Modules.Sample.csproj">
       <Project>{dcbd7053-2583-439f-ad2f-c6c2ed438482}</Project>
       <Name>PrismApp.Modules.Sample</Name>

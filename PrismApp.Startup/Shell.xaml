@@ -14,15 +14,16 @@
 
     <ScrollViewer VerticalScrollBarVisibility="Visible" 
                   HorizontalScrollBarVisibility="Disabled">
-        <WrapPanel Orientation="Horizontal">
+        <WrapPanel Orientation="Horizontal"
+                   Margin="0 0 0 5">
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.Sample}" />
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.Windows}" />
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.Commands}" />
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.EventPublisher}" />
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.EventSubscriber1}" />
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.EventSubscriber2}" />
-            <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.ViewsActivation}" 
-                            Margin="0 0 0 5" />
+            <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.ViewsActivation}" />
+            <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.RegionNavigation}" />
         </WrapPanel>
     </ScrollViewer>
 </Window>

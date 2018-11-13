@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PrismApp.Modules.ViewsActivation
+namespace PrismApp.Modules.RegionNavigation
 {
     /// <summary>
-    /// Interaction logic for ViewB.xaml
+    /// Interaction logic for RegionNavigationView.xaml
     /// </summary>
-    public partial class ViewB : UserControl
+    public partial class RegionNavigationView : UserControl
     {
-        public ViewB()
+        public RegionNavigationView()
         {
             InitializeComponent();
         }
