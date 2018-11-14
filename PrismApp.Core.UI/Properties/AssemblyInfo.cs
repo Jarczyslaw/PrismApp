@@ -36,5 +36,6 @@ using System.Windows.Markup;
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
+[assembly: XmlnsDefinition("http://jtjt.pl/UI", "PrismApp.Core.UI.Converters")]
 [assembly: XmlnsDefinition("http://jtjt.pl/UI", "PrismApp.Core.UI.Controls")]
 [assembly: XmlnsDefinition("http://jtjt.pl/UI", "PrismApp.Core.UI")]

@@ -7,13 +7,23 @@
              xmlns:ui="http://jtjt.pl/UI"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+        </Style>
+
+        <ui:BoolToVisibility x:Key="BoolToVisibility" />
+    </UserControl.Resources>
     <Grid>
         <ui:CenterContainer>
             <StackPanel>
                 <TextBlock FontSize="48"
-                       Text="{Binding Title}" />
+                       Text="{Binding Title, FallbackValue=Title}" />
                 <TextBlock FontSize="24"
-                           Text="{Binding PageViews, StringFormat='Page views: {0}'}" />
+                           Text="{Binding PageViews, StringFormat='Page views: {0}', FallbackValue=10}" />
+                <TextBlock FontSize="14"
+                           Visibility="{Binding NavigationParameterPassed, Converter={StaticResource BoolToVisibility}}"
+                           Text="{Binding NavigationParameter, StringFormat='Navigation parameter: {0}', FallbackValue=TestTestTestTestTestTest}" />
             </StackPanel>
         </ui:CenterContainer>
     </Grid>

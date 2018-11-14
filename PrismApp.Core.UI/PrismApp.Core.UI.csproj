@@ -52,6 +52,7 @@
     <Compile Include="Controls\CenterContainer.xaml.cs">
       <DependentUpon>CenterContainer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converters\BoolToVisibility.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -31,6 +31,9 @@
                       DisplayMemberPath="Name"
                       VerticalContentAlignment="Center"
                       Width="150" />
+            <TextBox Text="{Binding NavigationParameter}"
+                     Margin="5"
+                     Width="50" />
         </StackPanel>
 
         <ContentControl Grid.Row="1" 

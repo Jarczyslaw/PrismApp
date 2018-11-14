@@ -1,6 +1,7 @@
 ﻿using Prism.Commands;
 using Prism.Regions;
 using PrismApp.Core.Base;
+using PrismApp.Modules.Common.ViewModels;
 using PrismApp.Modules.Common.Views;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,13 @@ namespace PrismApp.Modules.RegionNavigation
         public DelegateCommand<Type> NavigateCommand { get; private set; } 
 
         public ObservableCollection<Type> Views { get; private set; }
+
+        private string navigationParameter;
+        public string NavigationParameter
+        {
+            get { return navigationParameter; }
+            set { SetProperty(ref navigationParameter, value); }
+        }
 
         private Type selectedView = null;
         public Type SelectedView
@@ -51,8 +59,15 @@ namespace PrismApp.Modules.RegionNavigation
 
         private void Navigate(Type viewType)
         {
-            if (viewType != null)
-                regionManager.RequestNavigate(RegionNavigationModule.ContentRegion, viewType.Name, NavigationComplete);
+            if (viewType == null)
+                return;
+
+            var parameters = new NavigationParameters
+            {
+                { ViewXViewModelBase.NavigationParameterName, NavigationParameter }
+            };
+            regionManager.RequestNavigate(RegionNavigationModule.ContentRegion, viewType.Name, NavigationComplete, parameters);
+            NavigationParameter = string.Empty;
         }
 
         private void NavigationComplete(NavigationResult result)
