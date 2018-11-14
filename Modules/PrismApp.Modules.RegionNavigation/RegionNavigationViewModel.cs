@@ -44,7 +44,8 @@ namespace PrismApp.Modules.RegionNavigation
             Views = new ObservableCollection<Type>
             {
                 typeof(ViewA),
-                typeof(ViewB)
+                typeof(ViewB),
+                typeof(ViewC)
             };
         }
 

@@ -24,6 +24,7 @@ namespace PrismApp.Modules.RegionNavigation
         {
             containerRegistry.RegisterForNavigation<ViewA>();
             containerRegistry.RegisterForNavigation<ViewB>();
+            containerRegistry.RegisterForNavigation<ViewC>();
         }
     }
 }

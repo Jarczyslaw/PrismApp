@@ -3,15 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:controls="clr-namespace:PrismApp.Modules.Common.Controls"
              mc:Ignorable="d" 
              xmlns:prism="http://prismlibrary.com/"
              xmlns:ui="http://jtjt.pl/UI"
              prism:ViewModelLocator.AutoWireViewModel="True"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <ui:CenterContainer>
-            <TextBlock FontSize="48"
-                       Text="{Binding Test}" />
-        </ui:CenterContainer>    
+        <controls:ViewX />   
     </Grid>
 </UserControl>

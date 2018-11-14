@@ -19,10 +19,13 @@
         <StackPanel Orientation="Horizontal">
             <Button Command="{Binding NavigateCommand}"
                     CommandParameter="{x:Type common:ViewA}"
-                    Content="Show ViewA" />
+                    Content="ViewA" />
             <Button Command="{Binding NavigateCommand}"
                     CommandParameter="{x:Type common:ViewB}"
-                    Content="Show ViewB" />
+                    Content="ViewB" />
+            <Button Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type common:ViewC}"
+                    Content="ViewC" />
             <ComboBox ItemsSource="{Binding Views}"
                       SelectedItem="{Binding SelectedView}"
                       DisplayMemberPath="Name"

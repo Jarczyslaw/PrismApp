@@ -7,8 +7,11 @@ using System.Threading.Tasks;
 
 namespace PrismApp.Modules.Common.ViewModels
 {
-    public class ViewBViewModel : ViewModelBase
+    public class ViewBViewModel : ViewXViewModelBase
     {
-        public string Test => "ViewB";
+        public ViewBViewModel()
+        {
+            Title = "ViewB";
+        }
     }
 }
