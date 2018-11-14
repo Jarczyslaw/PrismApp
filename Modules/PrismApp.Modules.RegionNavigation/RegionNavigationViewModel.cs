@@ -1,8 +1,10 @@
 ﻿using Prism.Commands;
 using Prism.Regions;
 using PrismApp.Core.Base;
+using PrismApp.Modules.Common.Views;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -14,6 +16,20 @@ namespace PrismApp.Modules.RegionNavigation
     {
         public DelegateCommand<Type> NavigateCommand { get; private set; } 
 
+        public ObservableCollection<Type> Views { get; private set; }
+
+        private Type selectedView = null;
+        public Type SelectedView
+        {
+            get { return selectedView; }
+            set
+            {
+                if (value != selectedView)
+                    Navigate(value);
+                SetProperty(ref selectedView, value);
+            }
+        }
+
         private IRegionManager regionManager;
 
         public RegionNavigationViewModel(IRegionManager regionManager)
@@ -22,12 +38,19 @@ namespace PrismApp.Modules.RegionNavigation
 
             this.regionManager = regionManager;
 
-            NavigateCommand = new DelegateCommand<Type>(Navigate);
+            NavigateCommand = new DelegateCommand<Type>(t => SelectedView = t);
+
+            Views = new ObservableCollection<Type>
+            {
+                typeof(ViewA),
+                typeof(ViewB)
+            };
         }
 
         private void Navigate(Type viewType)
         {
-            regionManager.RequestNavigate(RegionNavigationModule.ContentRegion, viewType.Name);
+            if (viewType != null)
+                regionManager.RequestNavigate(RegionNavigationModule.ContentRegion, viewType.Name);
         }
     }
 }

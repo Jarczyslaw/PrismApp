@@ -37,5 +37,9 @@
     <Style TargetType="GroupBox">
         <Setter Property="Margin" Value="5" />
     </Style>
+
+    <Style TargetType="ComboBox">
+        <Setter Property="Margin" Value="5" />
+    </Style>
     
 </ResourceDictionary>

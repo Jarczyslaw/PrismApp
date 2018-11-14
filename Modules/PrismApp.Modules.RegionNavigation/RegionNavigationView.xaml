@@ -23,6 +23,11 @@
             <Button Command="{Binding NavigateCommand}"
                     CommandParameter="{x:Type common:ViewB}"
                     Content="Show ViewB" />
+            <ComboBox ItemsSource="{Binding Views}"
+                      SelectedItem="{Binding SelectedView}"
+                      DisplayMemberPath="Name"
+                      VerticalContentAlignment="Center"
+                      Width="150" />
         </StackPanel>
 
         <ContentControl Grid.Row="1" 
