@@ -5,6 +5,7 @@ using PrismApp.Modules.Common.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -50,7 +51,12 @@ namespace PrismApp.Modules.RegionNavigation
         private void Navigate(Type viewType)
         {
             if (viewType != null)
-                regionManager.RequestNavigate(RegionNavigationModule.ContentRegion, viewType.Name);
+                regionManager.RequestNavigate(RegionNavigationModule.ContentRegion, viewType.Name, NavigationComplete);
+        }
+
+        private void NavigationComplete(NavigationResult result)
+        {
+            Debug.WriteLine($"Navigation to {result.Context.Uri} completed");
         }
     }
 }
