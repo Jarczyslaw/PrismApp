@@ -26,14 +26,9 @@
             <Button Command="{Binding NavigateCommand}"
                     CommandParameter="{x:Type common:ViewC}"
                     Content="ViewC" />
-            <ComboBox ItemsSource="{Binding Views}"
-                      SelectedItem="{Binding SelectedView}"
-                      DisplayMemberPath="Name"
-                      VerticalContentAlignment="Center"
-                      Width="150" />
             <TextBox Text="{Binding NavigationParameter}"
                      Margin="5"
-                     Width="50" />
+                     Width="100" />
         </StackPanel>
 
         <ContentControl Grid.Row="1" 

@@ -54,6 +54,8 @@
     </Compile>
     <Compile Include="Converters\BoolToVisibility.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Dialogs.cs" />
+    <Compile Include="Services\IDialogs.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controls\CenterContainer.xaml">

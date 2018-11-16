@@ -27,18 +27,6 @@ namespace PrismApp.Modules.RegionNavigation
             set { SetProperty(ref navigationParameter, value); }
         }
 
-        private Type selectedView = null;
-        public Type SelectedView
-        {
-            get { return selectedView; }
-            set
-            {
-                if (value != selectedView)
-                    Navigate(value);
-                SetProperty(ref selectedView, value);
-            }
-        }
-
         private IRegionManager regionManager;
 
         public RegionNavigationViewModel(IRegionManager regionManager)
@@ -47,7 +35,7 @@ namespace PrismApp.Modules.RegionNavigation
 
             this.regionManager = regionManager;
 
-            NavigateCommand = new DelegateCommand<Type>(t => SelectedView = t);
+            NavigateCommand = new DelegateCommand<Type>(Navigate);
 
             Views = new ObservableCollection<Type>
             {
@@ -67,12 +55,15 @@ namespace PrismApp.Modules.RegionNavigation
                 { ViewXViewModelBase.NavigationParameterName, NavigationParameter }
             };
             regionManager.RequestNavigate(RegionNavigationModule.ContentRegion, viewType.Name, NavigationComplete, parameters);
-            NavigationParameter = string.Empty;
         }
 
         private void NavigationComplete(NavigationResult result)
         {
-            Debug.WriteLine($"Navigation to {result.Context.Uri} completed");
+            if (result.Result == true)
+            {
+                Debug.WriteLine($"Navigation to {result.Context.Uri} completed");
+                NavigationParameter = string.Empty;
+            }
         }
     }
 }

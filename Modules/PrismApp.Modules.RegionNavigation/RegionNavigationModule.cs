@@ -2,6 +2,7 @@
 using Prism.Regions;
 using PrismApp.Core;
 using PrismApp.Core.Base;
+using PrismApp.Core.UI.Services;
 using PrismApp.Modules.Common.Views;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,8 @@ namespace PrismApp.Modules.RegionNavigation
 
         public override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.RegisterSingleton<IDialogs, Dialogs>();
+
             containerRegistry.RegisterForNavigation<ViewA>();
             containerRegistry.RegisterForNavigation<ViewB>();
             containerRegistry.RegisterForNavigation<ViewC>();
