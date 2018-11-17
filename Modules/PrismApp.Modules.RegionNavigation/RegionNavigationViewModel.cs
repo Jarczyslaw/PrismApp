@@ -50,6 +50,11 @@ namespace PrismApp.Modules.RegionNavigation
             if (viewType == null)
                 return;
 
+            var region = regionManager.Regions[RegionNavigationModule.ContentRegion];
+            var activeView = region.ActiveViews.FirstOrDefault();
+            if (activeView != null && activeView.GetType() == viewType)
+                return;
+
             var parameters = new NavigationParameters
             {
                 { ViewXViewModelBase.NavigationParameterName, NavigationParameter }
