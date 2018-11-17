@@ -6,6 +6,8 @@ using PrismApp.Core.UI.Services;
 using PrismApp.Modules.Common.Views;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;

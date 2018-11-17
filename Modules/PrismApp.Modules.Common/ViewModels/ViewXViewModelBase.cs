@@ -1,4 +1,5 @@
-﻿using Prism.Regions;
+﻿using Prism.Commands;
+using Prism.Regions;
 using PrismApp.Core.Base;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,8 @@ namespace PrismApp.Modules.Common.ViewModels
     public class ViewXViewModelBase : ViewModelBase, INavigationAware
     {
         public static string NavigationParameterName => nameof(NavigationParameterName);
+
+        protected IRegionNavigationJournal journal;
 
         public int pageViews = 0;
         public int PageViews
@@ -35,6 +38,25 @@ namespace PrismApp.Modules.Common.ViewModels
             }
         }
 
+        public DelegateCommand GoBackCommand { get; private set; }
+
+        public ViewXViewModelBase()
+        {
+            GoBackCommand = new DelegateCommand(GoBack, CanGoBack);
+        }
+
+        private bool CanGoBack()
+        {
+            return journal != null && journal.CanGoBack;
+        }
+
+        private void GoBack()
+        {
+            journal.GoBack();
+        }
+
+        #region INavigationAware implementation
+
         public virtual bool IsNavigationTarget(NavigationContext navigationContext)
         {
             return true;
@@ -44,6 +66,8 @@ namespace PrismApp.Modules.Common.ViewModels
 
         public virtual void OnNavigatedTo(NavigationContext navigationContext)
         {
+            journal = navigationContext.NavigationService.Journal;
+
             PageViews++;
 
             if (navigationContext.Parameters[NavigationParameterName] is string parameter)
@@ -51,5 +75,7 @@ namespace PrismApp.Modules.Common.ViewModels
             else
                 NavigationParameter = string.Empty;
         }
+
+        #endregion
     }
 }
