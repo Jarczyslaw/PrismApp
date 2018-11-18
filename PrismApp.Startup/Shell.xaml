@@ -7,15 +7,16 @@
         xmlns:core="http://jtjt.pl/Core"
         mc:Ignorable="d"
         Title="{Binding Title}"
-        Width="1250"
-        Height="980"
         prism:ViewModelLocator.AutoWireViewModel="True"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        SizeToContent="WidthAndHeight">
 
     <ScrollViewer VerticalScrollBarVisibility="Visible" 
-                  HorizontalScrollBarVisibility="Disabled">
+                  HorizontalScrollBarVisibility="Auto">
         <WrapPanel Orientation="Horizontal"
-                   Margin="0 0 0 5">
+                   Margin="0 0 0 5"
+                   Width="1220"
+                   Height="950">
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.Sample}" />
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.Windows}" />
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.Commands}" />
@@ -24,6 +25,7 @@
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.EventSubscriber2}" />
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.ViewsActivation}" />
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.RegionNavigation}" />
+            <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.Notifications}" />
         </WrapPanel>
     </ScrollViewer>
 </Window>
