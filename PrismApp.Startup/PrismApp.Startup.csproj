@@ -132,6 +132,10 @@
       <Project>{44c3c655-35a0-482f-aee0-19a167036395}</Project>
       <Name>PrismApp.Modules.EventSubscriber</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Modules\PrismApp.Modules.InvokeCommand\PrismApp.Modules.InvokeCommand.csproj">
+      <Project>{3a9ffddf-09d2-4394-baa4-541cd25486e9}</Project>
+      <Name>PrismApp.Modules.InvokeCommand</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Modules\PrismApp.Modules.Notifications\PrismApp.Modules.Notifications.csproj">
       <Project>{7AE6A061-1DE6-4A9A-AC35-113FC4DAAE92}</Project>
       <Name>PrismApp.Modules.Notifications</Name>

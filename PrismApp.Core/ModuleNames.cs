@@ -12,11 +12,11 @@ namespace PrismApp.Core
         public static string Sample => nameof(Sample);
         public static string Commands => nameof(Commands);
         public static string EventPublisher => nameof(EventPublisher);
-        public static string EventSubscriber1 => nameof(EventSubscriber1);
-        public static string EventSubscriber2 => nameof(EventSubscriber2);
+        public static string EventSubscriber => nameof(EventSubscriber);
         public static string Windows => nameof(Windows);
         public static string ViewsActivation => nameof(ViewsActivation);
         public static string RegionNavigation => nameof(RegionNavigation);
         public static string Notifications => nameof(Notifications);
+        public static string InvokeCommand => nameof(InvokeCommand);
     }
 }

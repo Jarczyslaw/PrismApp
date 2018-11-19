@@ -5,27 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:prism="http://prismlibrary.com/"
         xmlns:core="http://jtjt.pl/Core"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="{Binding Title}"
         prism:ViewModelLocator.AutoWireViewModel="True"
         WindowStartupLocation="CenterScreen"
         SizeToContent="WidthAndHeight">
 
-    <ScrollViewer VerticalScrollBarVisibility="Visible" 
-                  HorizontalScrollBarVisibility="Auto">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" 
+                  HorizontalScrollBarVisibility="Auto"
+                  Width="1250"
+                  Height="850">
         <WrapPanel Orientation="Horizontal"
                    Margin="0 0 0 5"
-                   Width="1220"
-                   Height="950">
+                   Width="1220">
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.Sample}" />
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.Windows}" />
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.Commands}" />
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.EventPublisher}" />
-            <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.EventSubscriber1}" />
-            <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.EventSubscriber2}" />
+            <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.EventSubscriber}" />
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.ViewsActivation}" />
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.RegionNavigation}" />
             <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.Notifications}" />
+            <ContentControl prism:RegionManager.RegionName="{x:Static core:ModuleNames.InvokeCommand}" />
         </WrapPanel>
     </ScrollViewer>
 </Window>

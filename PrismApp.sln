@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismApp.Modules.Common", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismApp.Modules.Notifications", "Modules\PrismApp.Modules.Notifications\PrismApp.Modules.Notifications.csproj", "{7AE6A061-1DE6-4A9A-AC35-113FC4DAAE92}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismApp.Modules.InvokeCommand", "Modules\PrismApp.Modules.InvokeCommand\PrismApp.Modules.InvokeCommand.csproj", "{3A9FFDDF-09D2-4394-BAA4-541CD25486E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -89,6 +91,10 @@ Global
 		{7AE6A061-1DE6-4A9A-AC35-113FC4DAAE92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AE6A061-1DE6-4A9A-AC35-113FC4DAAE92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AE6A061-1DE6-4A9A-AC35-113FC4DAAE92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A9FFDDF-09D2-4394-BAA4-541CD25486E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A9FFDDF-09D2-4394-BAA4-541CD25486E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A9FFDDF-09D2-4394-BAA4-541CD25486E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A9FFDDF-09D2-4394-BAA4-541CD25486E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -103,6 +109,7 @@ Global
 		{7708E193-27C5-419D-9641-FD48A9298D18} = {837EAB43-1CA4-443F-8EC0-B06E52AEBB2D}
 		{C50CAF11-978A-422D-AD3C-99CB300B31B5} = {837EAB43-1CA4-443F-8EC0-B06E52AEBB2D}
 		{7AE6A061-1DE6-4A9A-AC35-113FC4DAAE92} = {837EAB43-1CA4-443F-8EC0-B06E52AEBB2D}
+		{3A9FFDDF-09D2-4394-BAA4-541CD25486E9} = {837EAB43-1CA4-443F-8EC0-B06E52AEBB2D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {66F30B72-451D-4D69-8EAA-1DF22E7E28C0}

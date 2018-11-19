@@ -7,6 +7,7 @@ using PrismApp.Core.Services;
 using PrismApp.Modules.Commands;
 using PrismApp.Modules.EventPublisher;
 using PrismApp.Modules.EventSubscriber;
+using PrismApp.Modules.InvokeCommand;
 using PrismApp.Modules.Notifications;
 using PrismApp.Modules.RegionNavigation;
 using PrismApp.Modules.Sample;
@@ -88,6 +89,7 @@ namespace PrismApp.Startup
             modules.AddModule<ViewsActivationModule>();
             modules.AddModule<RegionNavigationModule>();
             modules.AddModule<NotificationsModule>();
+            modules.AddModule<InvokeCommandModule>();
             return modules;
         }
 

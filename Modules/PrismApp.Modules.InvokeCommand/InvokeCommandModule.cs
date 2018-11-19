@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PrismApp.Modules.EventSubscriber
+namespace PrismApp.Modules.InvokeCommand
 {
-    public class EventSubscriberModule : ModuleBase
+    public class InvokeCommandModule : ModuleBase
     {
         public override void RegisterRegion(IRegionManager regionManager)
         {
-            regionManager.RegisterViewWithRegion(ModuleNames.EventSubscriber, typeof(EventSubscriberView));
+            regionManager.RegisterViewWithRegion(ModuleNames.InvokeCommand, typeof(InvokeCommandView));
         }
     }
 }
